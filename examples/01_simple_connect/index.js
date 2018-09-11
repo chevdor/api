@@ -5,10 +5,6 @@ const api = createApi(provider);
 
 api.system.chain()
   .then((chain) => {
-    api.system.version()
-      .then((version) => {
-        console.log('Chain:', chain)
-        console.log('Version:', version)
-        process.exit(0)
-      })
+    console.log('You are connected to chain:', chain)
+    process.exit(0)
   })
